@@ -1,0 +1,31 @@
+{
+  "name": "middle.messenger.praktikum.yandex",
+  "version": "1.0.0",
+  "description": "Даже законченный проект остаётся только заготовкой, пока им не начнут пользоваться. Но сначала пользователь должен понять, зачем ему пользоваться вашим кодом. В этом помогает файл README.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server.js",
+    "dev1": "./node_modules/.bin/parcel index.html",
+    "build1": "./node_modules/.bin/parcel build index.html",
+    "dev": "parcel ./src/index.pug --port 1111",
+    "build": "parcel build ./src/**/*.pug --no-minify --public-url ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitrySheklein/middle.messenger.praktikum.yandex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitrySheklein/middle.messenger.praktikum.yandex/issues"
+  },
+  "homepage": "https://github.com/DmitrySheklein/middle.messenger.praktikum.yandex#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "pug": "^3.0.2",
+    "sass": "^1.32.13"
+  }
+}

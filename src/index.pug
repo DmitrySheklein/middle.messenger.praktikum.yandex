@@ -1,0 +1,15 @@
+doctype html
+html(lang="")
+  head
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap")
+    link(rel="stylesheet", href="./styles/main.scss")
+  body
+    h1 Hello #{hello} from Pug!!!
+    #root 
+    main.main-content
+      ul
+        each item in pageList
+          li
+            a(href= item.url)=item.name
+
+    script(src="index.js")
