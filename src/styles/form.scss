@@ -1,0 +1,40 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+    padding: 30px;
+    padding-top: 50px;
+}
+.form--login {
+    max-height: 450px;
+    height: 100%;
+}
+.form--signin {
+    max-height: 615px;
+    height: 100%;
+}
+
+.form__title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px; 
+}
+.form__input-wrap {
+    margin-bottom: 16px;
+}
+.form__buttons {
+    margin-top: auto;
+}
+.form__button:first-child {
+    margin-bottom: 2px;
+}

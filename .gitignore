@@ -64,3 +64,4 @@ typings/
 build
 dist
 .cache
+.parcel-cache

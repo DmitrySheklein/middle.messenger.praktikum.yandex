@@ -22,7 +22,11 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-
+body {
+    background-color: pink;
+    // background-color: gray;
+    // background-color: blue;
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -110,4 +114,19 @@ h6 {font-size: 16px;}
 }
 .button--back > .material-icons {
     line-height: 28px;    
+}
+
+.welcome-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+
+    &__list {
+        list-style: none;
+    }
+    &__link {
+        display: block;
+        font-size: 20px;
+        padding: 10px 0;
+    }
 }

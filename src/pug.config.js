@@ -1,5 +1,3 @@
-// pug.config.js
-
 module.exports = {
     locals: {
       hello: "world",

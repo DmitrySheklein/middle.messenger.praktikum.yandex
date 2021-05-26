@@ -1,15 +1,11 @@
-doctype html
-html(lang="")
-  head
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap")
-    link(rel="stylesheet", href="./styles/main.scss")
-  body
-    h1 Hello #{hello} from Pug!!!
-    #root 
-    main.main-content
-      ul
-        each item in pageList
-          li
-            a(href= item.url)=item.name
-
-    script(src="index.js")
+extends layout/_main
+block head
+  title Главная
+  link(rel="stylesheet", href="./styles/main.scss")
+block main-content
+  .welcome-page
+    h1 Hello Pug 1111!
+    ul.welcome-page__list
+      each item in pageList
+        li.welcome-page__item
+          a.welcome-page__link(href= `pages` + item.url)=item.name
