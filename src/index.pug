@@ -1,10 +1,9 @@
 extends layout/_main
-block head
+append head
   title Главная
   link(rel="stylesheet", href="./styles/main.scss")
 block main-content
   .welcome-page
-    h1 Hello Pug 1111!
     ul.welcome-page__list
       each item in pageList
         li.welcome-page__item

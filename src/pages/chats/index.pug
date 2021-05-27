@@ -1,0 +1,219 @@
+extends ../../layout/_main
+append head
+  title Чат
+  link(rel="stylesheet", href="/styles/chat.scss")
+  link(rel="stylesheet", href="/styles/modal.scss")
+block main-content
+  .chat-container
+    .chat-sidebar
+      nav.chat-sidebar__nav
+        a.chat-sidebar__nav-link(href='#') Профиль
+          span.chat-sidebar__nav-icon.material-icons keyboard_arrow_right
+      .search.chat-sidebar__search
+        span.search__icon.material-icons search
+        input.search__input(type='text', placeholder='Поиск')
+      ul.chat-list
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Андрей
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 13:49
+            span.chat-list__message-count 2
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Игорь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 20:19
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Илья
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 11:49
+            span.chat-list__message-count 4
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+            span.chat-list__message-count 2
+        li.chat-list__item.chat-list__item--active
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+            span.chat-list__message-count 2
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+        li.chat-list__item
+          .chat-list__image-wrap
+            img.chat-list__image(src='https://via.placeholder.com/50', alt)
+          .chat-list__content
+            strong.chat-list__name Пользователь
+            span.chat-list__message Бла бла бла
+          .chat-list__info
+            time.chat-list__time 10:49
+    .chat-content
+      .chat-content__header
+        .chat-content__user
+          img.chat-content__user-image(src='https://via.placeholder.com/50', alt)
+          span.chat-content__user-name Пользователь
+        .chat-content__settings
+          button.chat-content__settings-button
+            span.material-icons more_vert              
+          .dropdown.dropdown--settings
+            button.dropdown__item
+              span.dropdown__icon.material-icons add_circle_outline
+              span.dropdown__item-name Добавить пользователя
+            button.dropdown__item
+              span.dropdown__icon.material-icons remove_circle_outline
+              span.dropdown__item-name Удалить пользователя
+      .chat-content__body
+        ul.chat-content__messages
+          li.chat-content__message-date 19 июня            
+          li.chat-content__message
+            p.chat-content__message-content Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой. Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+            span.chat-content__message-time
+              span.chat-content__message-time-value 11:56
+          li.chat-content__message
+            p.chat-content__message-content Многие люди, работа которых связана с компьютерами жалуются на проблемы со здоровьем, такие как головная боль, заболевания кисти, боли в спине, плохое зрение. Кроме того, проводя много времени за компьютером, начинаем чрезмерно питаться, что в свою очередь приводит к ожирению.
+            span.chat-content__message-time
+              span.chat-content__message-time-value 11:57
+          li.chat-content__message.chat-content__message--user
+            p.chat-content__message-content Круто!
+            span.chat-content__message-time.chat-content__message-time--user
+              span.chat-content__message-time-icon.material-icons done                
+              span.chat-content__message-time-value 12:00
+          li.chat-content__message
+            p.chat-content__message-content Ага
+            span.chat-content__message-time
+              span.chat-content__message-time-value 12:05
+      .chat-content__action
+        .chat-content__attach
+          button.chat-content__attach-button
+            span.chat-content__attach-button-icon.material-icons attach_file              
+          .dropdown.dropdown--attach
+            button.dropdown__item
+              span.dropdown__icon.material-icons wallpaper                
+              span.dropdown__item-name Фото или Видео
+            button.dropdown__item
+              span.dropdown__icon.material-icons insert_drive_file
+              span.dropdown__item-name Файл
+            button.dropdown__item
+              span.dropdown__icon.material-icons location_on
+              span.dropdown__item-name Локация
+        form.chat-content__message-form(action='#')
+          input.chat-content__main-input(type='text', placeholder='Сообщение', name='chat-message')
+          button.button.button--circle.chat-content__send-button
+            span.chat-content__send-button-icon.material-icons arrow_forward              
+  .modal
+    .modal__overlay
+    .modal__content
+      h2.modal__title Добавить пользователя
+      .input-wrap
+      label.label(for='add-user') Логин
+      input#add-user.input(type='text')
+      button.button.modal__button Добавить
+      .modal__file-error Нужно выбрать файл
+//- block script 
+  //- script(src='../../js/main.js')

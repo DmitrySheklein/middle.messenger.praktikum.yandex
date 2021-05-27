@@ -1,0 +1,37 @@
+extends ../../layout/_main
+append head
+  title Профиль - Изменить данные
+  link(rel="stylesheet", href="/styles/profile.scss")
+  link(rel="stylesheet", href="/styles/modal.scss")
+block main-content
+  .profile-container
+    .profile-sidebar
+      button.button.button--back(title='Назад')
+        span.material-icons arrow_back        
+    .profile-content
+      .profile
+        .profile__image
+          img(src='https://via.placeholder.com/150', alt)
+        h1.profile__name.profile__name--hidden Иван
+        form.profile__form(action='#')
+          .profile__inputs
+            .profile__input-wrap
+              label.profile__input-label(for='mail') Почта
+              input#mail.profile__input(type='mail', value='pochta@yandex.ru', name='mail')
+            .profile__input-wrap
+              label.profile__input-label(for='login') Логин
+              input#login.profile__input(type='text', value='ivanivanov', name='login')
+            .profile__input-wrap
+              label.profile__input-label(for='first-name') Имя
+              input#first-name.profile__input(type='text', value='Иван', name='first_name')
+            .profile__input-wrap
+              label.profile__input-label(for='last-name') Фамилия
+              input#last-name.profile__input(type='text', value='Иванов', name='second_name')
+            .profile__input-wrap
+              label.profile__input-label(for='chat-name') Имя в чате
+              input#chat-name.profile__input(type='text', value='Иван', name='chat_name')
+            .profile__input-wrap
+              label.profile__input-label(for='phone') Телефон
+              input#phone.profile__input(type='tel', value='+7 (909) 967 30 30', name='phone')
+          .profile__buttons
+            button.button(type='submit') Сохранить
