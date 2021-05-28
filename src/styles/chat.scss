@@ -11,29 +11,30 @@
     overflow: hidden;
     background: #FBFBFB;
     border-right: 1px solid #EAEAEA;
+    &__nav {  
+        padding: 0 10px;
+        padding-top: 20px;      
+        padding-bottom: 0;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+    &__nav-link {
+        font-size: 12px;
+        color: #999999;    
+        &:hover {
+            color: #3369F3;
+        }
+    }
+    &__nav-icon {
+        font-size: 15px;
+        vertical-align: middle;
+    }
+    &__search {
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
 }
-.chat-sidebar__nav {  
-    padding: 0 10px;
-    padding-top: 20px;      
-    padding-bottom: 0;
-    margin-bottom: 20px;
-    text-align: right;
-}
-.chat-sidebar__nav-link {
-    font-size: 12px;
-    color: #999999;    
-}
-.chat-sidebar__nav-link:hover {
-    color: #3369F3;
-}
-.chat-sidebar__nav-icon {
-    font-size: 15px;
-    vertical-align: middle;
-}
-.chat-sidebar__search {
-    padding: 0 10px;
-    margin-bottom: 15px;
-}
+
 .chat-list {
     padding: 0;    
     margin-top: 14px;
@@ -42,16 +43,16 @@
     max-height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: 100px;    
-}
-.chat-list::-webkit-scrollbar-track {
-    border-radius: 0;
-}
-.chat-list::-webkit-scrollbar {
-    width: 0px;
-}
-.chat-list::-webkit-scrollbar-thumb {
-    border-radius: 0;
+    padding-bottom: 100px;  
+    &::-webkit-scrollbar-track {
+        border-radius: 0;
+    }
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+    }
 }
 
 .chat-list__item {
@@ -83,6 +84,8 @@
 }
 .chat-list__image-wrap {
     position: relative;
+    max-width: 50px;
+    max-height: 50px;
     z-index: 1;
     border-radius: 50%;
     overflow: hidden;

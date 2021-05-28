@@ -8,21 +8,18 @@
 
 .error-content {
     text-align: center;
-}
-
-.error-content__title {
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 20px;
-}
-
-.error-content__text {
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 70px;
-}
-
-.error-content__link {
-    font-size: 11px;
-    color: #3369F3;
+    &__title {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 70px;
+    }
+    &__link {
+        font-size: 11px;
+        color: #3369F3;
+    }    
 }

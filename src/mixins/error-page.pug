@@ -1,0 +1,7 @@
+//- Блок ошибки
+mixin errorBlock(obj)
+  .error-container
+    .error-content
+      h1.error-content__title=obj.title
+      p.error-content__text=obj.text
+      a.error-content__link(href=obj.linkHref)=obj.linkText

@@ -1,10 +1,12 @@
 extends ../../layout/_main
-block head
+include ../../mixins/error-page
+append head
   title 505
   link(rel="stylesheet", href="/styles/error-page.scss")
 block main-content
-  .error-container
-    .error-content
-      h1.error-content__title 500
-      p.error-content__text Мы уже фиксим
-      a.error-content__link(href="/") Назад к чатам
+  +errorBlock({
+    title: `500`,
+    text: `Мы уже фиксим`,
+    linkText: `Назад к чатам`,
+    linkHref: `/`
+  })
