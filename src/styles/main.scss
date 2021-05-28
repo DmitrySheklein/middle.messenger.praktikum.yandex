@@ -1,13 +1,14 @@
+@import 'variables';
+
 *, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 html {height: 100%;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;}
-input {font-family: 'Inter', sans-serif;}
+input {font-family: $font;}
 img {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
     border: 0;
 }
-
 body {
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@ body {
     position: relative;
     background: #E5E5E5;
     background: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: $font;
     font-size: 13px;
     color: #1E1E1E;
     margin: 0;
@@ -33,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizelegibility;
     margin:0;
     padding:0;
-    font-family: 'Inter', sans-serif;
+    font-family: $font;
     font-weight: 400;
     color: #1E1E1E;
 }
@@ -47,13 +48,13 @@ h6 {font-size: 16px;}
 .main-content {
     flex: 1 0 auto;
 }
-/*  */
+
 .label {
     display: block;
     margin-bottom: 8px;
     font-size: 9px;
     line-height: 9px;
-    color: #999999;  
+    color: $input-text-color;  
 }
 .input-wrap {
     position: relative;
@@ -63,53 +64,55 @@ h6 {font-size: 16px;}
     width: 100%;
     background: none;
     border: none;
-    border-bottom: 1px solid #3369F3;    
+    border-bottom: 1px solid $main-color;    
 }
 .input-error {
     display: none;
     font-size: 8px; 
-    color: #FF2F2F;
-}
-.input-error--show {
-    display: block;
+    color: $error-color;;
+    &--show {
+        display: block;
+    }
 }
 .button {
     display: block;
     width: 100%;
     line-height: 13px;    
     padding: 12px 0;
-    background: #3369F3;
+    background: $main-color;
     border-radius: 8px;  
     text-align: center;
     color: #FFFFFF;
     border: none; 
     cursor: pointer;   
-}
-.button:hover {
-    background: #2e5eda
-}
-.button--transparent {
-    background: none;
-    color: #3369F3;
-}
-.button--transparent:hover {
-    background: none;
-}
-.button--back {
-    display: block;
-    width: 28px;
-    height: 28px;    
-    line-height: 28px;
-    border-radius: 50%;    
-    padding: 0;
-    margin: auto;
-}
-.button--circle {
-    border-radius: 50%;
-    padding: 0;
-}
-.button--back > .material-icons {
-    line-height: 28px;    
+    transition: all .3s;
+
+    &:hover {
+        background: darken($main-color, 20%)
+    }
+    &--transparent {
+        background: none;
+        color: $main-color;
+        &:hover {
+            background: none;
+        }
+    }
+    &--back {
+        display: block;
+        width: 28px;
+        height: 28px;    
+        line-height: 28px;
+        border-radius: 50%;    
+        padding: 0;
+        margin: auto;
+    }
+    &--circle {
+        border-radius: 50%;
+        padding: 0;
+    }
+    &--back > .material-icons {
+        line-height: 28px;    
+    }
 }
 
 .welcome-page {
@@ -125,7 +128,7 @@ h6 {font-size: 16px;}
         font-size: 20px;
         padding: 10px 0;
         &:hover {
-            color: #3369F3;
+            color: $main-color;
         }
     }
 }

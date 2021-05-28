@@ -61,7 +61,7 @@ typings/
 .next
 
 # build dir
-build
-dist
+build/
+dist/
 .cache
 .parcel-cache

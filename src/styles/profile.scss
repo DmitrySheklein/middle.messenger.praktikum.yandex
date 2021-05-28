@@ -1,3 +1,5 @@
+@import 'variables';
+
 .profile-container {
     display: flex;
     height: 100%;
@@ -25,11 +27,10 @@
 }
 .profile__image--editable {
     position: relative;
-}
-
-.profile__image--editable:hover .profile__image-edit-text {
-    visibility: visible;
-    opacity: 1;
+    &:hover .profile__image-edit-text {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 .profile__image-edit-text {
     visibility: hidden;
@@ -53,20 +54,21 @@
     font-size: 16px;
     text-align: center;
     margin-bottom: 60px;
-}
-.profile__name--hidden {
-    visibility: hidden;
+    &--hidden {
+        visibility: hidden;
+    }
 }
 .profile__inputs {
     margin-bottom: 60px;
-}
-.profile__inputs--password-page {
-    margin-bottom: 160px;
+    &--password-page {
+        margin-bottom: 160px;
+    }
 }
 .profile__input-wrap {
     position: relative;
-}
 
+    &:last-child .profile__input {border-bottom: 0;margin-bottom: 0;}
+}
 .profile__input-label {
     position: absolute;
     left: 0;
@@ -81,10 +83,10 @@
     border: none;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    color: #999999;
+    color: $input-text-color;
     border-bottom: 1px solid #EAEAEA;
 }
-.profile__input-wrap:last-child .profile__input {border-bottom: 0;margin-bottom: 0;}
+
 .profile__button {
     display: block;
     width: 100%;
@@ -92,14 +94,15 @@
     padding-bottom: 10px;
     margin-bottom: 10px;
     background: none;
-    color: #3369F3;
+    color: $main-color;
     font-size: 13px;
     text-align: left;
     border: none;
     border-bottom: 1px solid #EAEAEA;
     cursor: pointer;
-}
-.profile__button--exit {
-    border-bottom: 0;
-    color: #FF0000;
+
+    &--exit {
+        border-bottom: 0;
+        color: #FF0000;
+    }
 }
