@@ -1,4 +1,5 @@
 extends ../../layout/_main
+include ../../mixins/modal
 append head
   title Профиль
   link(rel="stylesheet", href="/styles/profile.scss")
@@ -41,15 +42,10 @@ block main-content
           button.profile__button Изменить данные
           button.profile__button Изменить пароль
           button.profile__button.profile__button--exit Выйти
-  .modal
-    .modal__overlay
-    .modal__content
-      h2.modal__title Загрузите файл
-      .file
-        label.file__label(for='file-input')
-          span.file__label-text Выбрать файл
-          br
-          span.file__label-text на компьютере
-        input#file-input.file__input(type='file')
-      button.button.modal__button Поменять
-      .modal__file-error Нужно выбрать файл          
+  +modal({
+    title: `Загрузите файл`,
+    type: `file`,
+    isShow: false,
+    modalBtnName: `Поменять`
+  })          
+      

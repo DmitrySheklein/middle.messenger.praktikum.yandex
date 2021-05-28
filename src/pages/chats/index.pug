@@ -1,5 +1,7 @@
 extends ../../layout/_main
 include ../../mixins/chat-page
+include ../../mixins/modal
+
 append head
   title Чат
   link(rel="stylesheet", href="/styles/chat.scss")
@@ -40,33 +42,8 @@ block main-content
               span.dropdown__item-name Удалить пользователя
       .chat-content__body
         ul.chat-content__messages
-          +messageItemDate(`3 июня`)
-          +messageItem({
-            message: `Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой. Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.`,
-            time: `11:56`            
-          })
-          +messageItem({
-            message: `Многие люди, работа которых связана с компьютерами жалуются на проблемы со здоровьем, такие как головная боль, заболевания кисти, боли в спине, плохое зрение. Кроме того, проводя много времени за компьютером, начинаем чрезмерно питаться, что в свою очередь приводит к ожирению.`,
-            time: `11:57`
-          })
-          +messageItem({
-            message: `Круто!`,
-            time: `12:00`,
-            isUser: true
-          })
-          +messageItem({
-            message: `Ага`,
-            time: `12:05`
-          })
-          +messageItemDate(`10 июня`)
-          +messageItem({
-            message: `Привет, ты как ???`,
-            time: `17:55`
-          })          
-          +messageItem({
-            message: `Куда пропал?`,
-            time: `23:01`
-          })          
+          each item in messageArray
+            +messageItem(item)       
       .chat-content__action
         .chat-content__attach
           button.chat-content__attach-button
@@ -84,14 +61,18 @@ block main-content
         form.chat-content__message-form(action='#')
           input.chat-content__main-input(type='text', placeholder='Сообщение', name='chat-message')
           button.button.button--circle.chat-content__send-button
-            span.chat-content__send-button-icon.material-icons arrow_forward              
-  .modal
-    .modal__overlay
-    .modal__content
-      h2.modal__title Добавить пользователя
-      .input-wrap
-      label.label(for='add-user') Логин
-      input#add-user.input(type='text')
-      button.button.modal__button Добавить
-      .modal__file-error Нужно выбрать файл
+            span.chat-content__send-button-icon.material-icons arrow_forward
+  +modal({
+    title: `Добавить пользователя`,
+    type: `input`,
+    inputArr: [
+      {
+      id: `add-user`,
+      name: `Логин`,
+      type: `text`,      
+      }
+    ],
+    isShow: false,
+    modalBtnName: `Добавить`
+  })
     

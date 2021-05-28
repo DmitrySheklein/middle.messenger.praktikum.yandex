@@ -1,15 +1,18 @@
 //- Элемент списка
 mixin chatItem(obj)
-  li.chat-list__item(class=obj.current ? 'chat-list__item--active' : '')
-    .chat-list__image-wrap
-      img.chat-list__image(src=obj.avatarImg)
-    .chat-list__content
-      strong.chat-list__name= obj.name
-      span.chat-list__message= obj.message 
-    .chat-list__info
-      time.chat-list__time=obj.time
-      if (obj.withNewMsg && obj.newMsgCount)
-        span.chat-list__message-count= obj.newMsgCount
+  if (obj.type === `date` && obj.date)
+    li.chat-content__message-date=obj.date 
+  else if (obj.type === `message`)
+    li.chat-list__item(class=obj.current ? 'chat-list__item--active' : '')
+      .chat-list__image-wrap
+        img.chat-list__image(src=obj.avatarImg)
+      .chat-list__content
+        strong.chat-list__name= obj.name
+        span.chat-list__message= obj.message
+      .chat-list__info
+        time.chat-list__time=obj.time
+        if (obj.withNewMsg && obj.newMsgCount)
+          span.chat-list__message-count= obj.newMsgCount
 //- Элемент сообщения чата
 mixin messageItem(obj)
   li.chat-content__message(class=obj.isUser ? 'chat-content__message--user' : '')
@@ -18,6 +21,3 @@ mixin messageItem(obj)
       if obj.isUser
         span.chat-content__message-time-icon.material-icons done                
       span.chat-content__message-time-value=obj.time
-//- Элемент сообщения чата
-mixin messageItemDate(date)      
-  li.chat-content__message-date=date 
