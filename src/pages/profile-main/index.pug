@@ -1,23 +1,17 @@
 extends ../../layout/_main
 include ../../mixins/modal
+include ../../mixins/profile-page
 append head
   title Профиль
   link(rel="stylesheet", href="/styles/profile.scss")
   link(rel="stylesheet", href="/styles/modal.scss")
 block main-content
   .profile-container
-    .profile-sidebar
-      button.button.button--back(title='Назад')
-        span.material-icons arrow_back          
+    +profile-sidebar    
     .profile-content
       .profile
-        .profile__image.profile__image--editable
-          span.profile__image-edit-text
-            | Поменять
-            br
-            | аватар
-          img(src='../../../static/avatar-150.png', alt='Аватар пользователя')
-        h1.profile__name Иван
+        +profile-image(true)
+        +profile-name('Иван')
         form.profile__form(action='#')
           .profile__inputs
             .profile__input-wrap

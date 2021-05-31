@@ -8,6 +8,7 @@
         const values = Object.fromEntries(formData.entries());
         console.log(values);
     }
+    
     if(form){
         form.addEventListener('submit', onSubmit)
     }

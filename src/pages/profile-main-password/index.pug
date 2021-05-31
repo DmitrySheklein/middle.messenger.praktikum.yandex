@@ -1,18 +1,16 @@
 extends ../../layout/_main
+include ../../mixins/profile-page
 append head
   title Профиль - Изменить пароль
   link(rel="stylesheet", href="/styles/profile.scss")
   link(rel="stylesheet", href="/styles/modal.scss")
 block main-content
   .profile-container
-    .profile-sidebar
-      button.button.button--back(title='Назад')
-        span.material-icons arrow_back          
+    +profile-sidebar        
     .profile-content
       .profile
-        .profile__image
-          img(src='https://via.placeholder.com/150', alt)
-        h1.profile__name.profile__name--hidden Иван
+        +profile-image
+        +profile-name('Иван',true)
         form.profile__form(action='#')
           .profile__inputs.profile__inputs--password-page
             .profile__input-wrap

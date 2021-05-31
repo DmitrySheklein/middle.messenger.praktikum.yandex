@@ -1,0 +1,17 @@
+//- Сайдбар
+mixin profile-sidebar 
+  .profile-sidebar
+    button.button.button--back(title='Назад')
+      span.material-icons arrow_back
+//- Блок аватара пользователя
+mixin profile-image(editable=false) 
+  .profile__image(class=editable ? 'profile__image--editable' : '')
+    if editable
+      span.profile__image-edit-text
+        | Поменять
+        br
+        | аватар
+    img(src='../../../static/user-avatar.png', alt='Аватар пользователя')
+//- Имя пользователя
+mixin profile-name(name,hidden=false) 
+  h1.profile__name(class=hidden? 'profile__name--hidden' : '')=name
