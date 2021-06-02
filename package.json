@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node ./server.js",
     "dev": "npm-run-all --parallel watch start",
-    "watch": "parcel watch ./src/**/*.pug",
-    "build": "parcel build ./src/**/*.pug"
+    "watch": "parcel watch './src/**/*.pug'",
+    "build": "parcel build './src/**/*.pug'"
   },
   "repository": {
     "type": "git",
