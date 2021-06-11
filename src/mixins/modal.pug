@@ -1,0 +1,20 @@
+//- Модальное окно
+mixin modal(obj)
+  .modal(class=obj.isShow ? 'modal--show' : '')
+    .modal__overlay
+    .modal__content
+      h2.modal__title=obj.title
+      if (obj.type === `input` && obj.inputArr)
+        each item in obj.inputArr
+          .input-wrap
+            label.label(for=item.id)=item.name
+            input.input(type=item.type, id=item.id)
+      if (obj.type === `file`)
+        .file
+          label.file__label(for='file-input')
+            span.file__label-text Выбрать файл
+            br
+            span.file__label-text на компьютере
+          input#file-input.file__input(type='file')      
+      button.button.modal__button=obj.modalBtnName
+      .modal__file-error Нужно выбрать файл

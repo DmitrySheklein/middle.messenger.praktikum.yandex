@@ -1,0 +1,108 @@
+@import 'variables';
+
+.profile-container {
+    display: flex;
+    height: 100%;
+}
+.profile-sidebar {
+    display: flex;
+    width: 64px;
+    height: 100%;
+    
+    background: #FBFBFB;
+    border-right: 1px solid #EAEAEA;
+}
+.profile-content {
+    max-width: 510px;
+    width: 100%;
+    margin: auto;
+}
+.profile__image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.profile__image--editable {
+    position: relative;
+    &:hover .profile__image-edit-text {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.profile__image-edit-text {
+    visibility: hidden;
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    cursor: pointer;  
+}
+.profile__name {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 60px;
+    &--hidden {
+        visibility: hidden;
+    }
+}
+.profile__inputs {
+    margin-bottom: 60px;
+    &--password-page {
+        margin-bottom: 160px;
+    }
+}
+.profile__input-wrap {
+    position: relative;
+
+    &:last-child .profile__input {border-bottom: 0;margin-bottom: 0;}
+}
+.profile__input-label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 13px;
+}
+.profile__input {
+    display: block;
+    width: 100%;
+    background: none;
+    text-align: right;
+    border: none;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: $input-text-color;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.profile__button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    background: none;
+    color: $main-color;
+    font-size: 13px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #EAEAEA;
+    cursor: pointer;
+
+    &--exit {
+        border-bottom: 0;
+        color: #FF0000;
+    }
+}

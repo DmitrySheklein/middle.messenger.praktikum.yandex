@@ -1,0 +1,18 @@
+extends ../../layout/_main
+append head
+  title Логин
+  link(rel="stylesheet", href="/styles/form.scss")
+block main-content
+  .form-container
+    form.form.form--login(action='#')
+      h2.form__title Вход
+      .form__input-wrap.input-wrap
+        label.label.form__label Логин
+        input.input.form__input(type='text', value='ivanivanov', name='login')
+        span.input-error Неверный логин
+      .form__input-wrap.input-wrap
+        label.label.form__label Пароль
+        input.input.form__input(type='password', value='qwerty', name='password')
+      .form__buttons
+        button.button.form__button Авторизоваться
+        a.button.button--transparent.form__button(href='#') Нет аккаунта?

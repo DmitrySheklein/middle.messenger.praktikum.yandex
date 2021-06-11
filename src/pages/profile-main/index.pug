@@ -1,0 +1,45 @@
+extends ../../layout/_main
+include ../../mixins/modal
+include ../../mixins/profile-page
+append head
+  title Профиль
+  link(rel="stylesheet", href="/styles/profile.scss")
+  link(rel="stylesheet", href="/styles/modal.scss")
+block main-content
+  .profile-container
+    +profile-sidebar    
+    .profile-content
+      .profile
+        +profile-image(true)
+        +profile-name('Иван')
+        form.profile__form(action='#')
+          .profile__inputs
+            .profile__input-wrap
+              label.profile__input-label Почта
+              input.profile__input(type='mail', value='pochta@yandex.ru')
+            .profile__input-wrap
+              label.profile__input-label Логин
+              input.profile__input(type='text', value='ivanivanov')
+            .profile__input-wrap
+              label.profile__input-label Имя
+              input.profile__input(type='text', value='Иван')
+            .profile__input-wrap
+              label.profile__input-label Фамилия
+              input.profile__input(type='text', value='Иванов')
+            .profile__input-wrap
+              label.profile__input-label Имя в чате
+              input.profile__input(type='text', value='Иван')
+            .profile__input-wrap
+              label.profile__input-label Телефон
+              input.profile__input(type='tel', value='+7 (909) 967 30 30')
+        .profile__buttons
+          button.profile__button Изменить данные
+          button.profile__button Изменить пароль
+          button.profile__button.profile__button--exit Выйти
+  +modal({
+    title: `Загрузите файл`,
+    type: `file`,
+    isShow: false,
+    modalBtnName: `Поменять`
+  })          
+      

@@ -1,0 +1,33 @@
+extends ../../layout/_main
+append head
+  title Регистрация
+  link(rel="stylesheet", href="/styles/form.scss")
+block main-content
+  .form-container
+    form.form.form--signin(action='#')
+      h2.form__title Регистрация
+      .form__input-wrap.input-wrap
+        label.label.form__label Почта
+        input.input.form__input(type='mail', value='pochta@yandex.ru', name='mail')
+        span.input-error Неверный формат почты
+      .form__input-wrap.input-wrap
+        label.label.form__label Логин
+        input.input.form__input(type='text', value='ivanivanov', name='login')
+      .form__input-wrap.input-wrap
+        label.label.form__label Имя
+        input.input.form__input(type='text', value='Иван', name='first_name')
+      .form__input-wrap.input-wrap
+        label.label.form__label Фамилия
+        input.input.form__input(type='text', value='Иванов', name='last_name')
+      .form__input-wrap.input-wrap
+        label.label.form__label Телефон
+        input.input.form__input(type='tel', value='+7 (909) 967 30 30', name='phone')
+      .form__input-wrap.input-wrap
+        label.label.form__label Пароль
+        input.input.form__input(type='password', value='qwerty', name='password')
+      .form__input-wrap.input-wrap
+        label.label.form__label Пароль (ещё раз)
+        input.input.form__input(type='password', value='qwerty', name='password_2')
+      .form__buttons
+        button.button.form__button Зарегистрироваться
+        button.button.button--transparent.form__button Войти

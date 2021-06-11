@@ -1,0 +1,26 @@
+extends ../../layout/_main
+include ../../mixins/profile-page
+append head
+  title Профиль - Изменить пароль
+  link(rel="stylesheet", href="/styles/profile.scss")
+  link(rel="stylesheet", href="/styles/modal.scss")
+block main-content
+  .profile-container
+    +profile-sidebar        
+    .profile-content
+      .profile
+        +profile-image
+        +profile-name('Иван',true)
+        form.profile__form(action='#')
+          .profile__inputs.profile__inputs--password-page
+            .profile__input-wrap
+              label.profile__input-label(for='old-password') Старый пароль
+              input#old-password.profile__input(type='password', value='qwerty123456', name='old_password')
+            .profile__input-wrap
+              label.profile__input-label(for='new-password') Новый пароль
+              input#new-password.profile__input(type='password', value='123456qwerty', name='new_password')
+            .profile__input-wrap
+              label.profile__input-label(for='new-password-2') Повторите новый пароль
+              input#new-password-2.profile__input(type='password', value='123456qwerty', name='new_password_2')
+          .profile__buttons
+            button.button Сохранить

@@ -1,0 +1,69 @@
+extends ../../layout/_main
+include ../../mixins/chat-page
+include ../../mixins/modal
+include ../../mixins/dropdown
+
+append head
+  title Чат
+  link(rel="stylesheet", href="/styles/chat.scss")
+  link(rel="stylesheet", href="/styles/modal.scss")  
+block main-content
+  .chat-container
+    .chat-sidebar
+      nav.chat-sidebar__nav
+        a.chat-sidebar__nav-link(href='#') Профиль
+          span.chat-sidebar__nav-icon.material-icons keyboard_arrow_right
+      .search.chat-sidebar__search
+        span.search__icon.material-icons search
+        input.search__input(type='text', placeholder='Поиск')
+      ul.chat-list
+        each item in getRandomArray(10)
+          +chatItem({
+            name: 'Пользователь',
+            message: 'Бла бла бла',
+            withNewMsg: getRandomInt(0,1),
+            newMsgCount: getRandomInt(0,10),
+            time: '11:57',
+            avatarImg: '../../../static/avatar-150.png'
+          })
+    .chat-content
+      .chat-content__header
+        .chat-content__user
+          img.chat-content__user-image(src='../../../static/avatar-150.png', alt)
+          span.chat-content__user-name Пользователь
+        .chat-content__settings
+          button.chat-content__settings-button
+            span.material-icons more_vert              
+          .dropdown.dropdown--settings
+            +dropdown-item('Добавить пользователя', add_circle_outline)
+            +dropdown-item('Удалить пользователя', remove_circle_outline)
+      .chat-content__body
+        ul.chat-content__messages
+          each item in messageArray
+            +messageItem(item)       
+      .chat-content__action
+        .chat-content__attach
+          button.chat-content__attach-button
+            span.chat-content__attach-button-icon.material-icons attach_file              
+          .dropdown.dropdown--attach
+            +dropdown-item('Фото или Видео', wallpaper)
+            +dropdown-item('Файл', insert_drive_file)          
+            +dropdown-item('Локация', location_on)          
+        form.chat-content__message-form(action='#')
+          input.chat-content__main-input(type='text', placeholder='Сообщение', name='chat-message')
+          button.button.button--circle.chat-content__send-button
+            span.chat-content__send-button-icon.material-icons arrow_forward
+  +modal({
+    title: 'Добавить пользователя',
+    type: 'input',
+    inputArr: [
+      {
+      id: 'add-user',
+      name: 'Логин',
+      type: 'text',      
+      }
+    ],
+    isShow: false,
+    modalBtnName: 'Добавить'
+  })
+    

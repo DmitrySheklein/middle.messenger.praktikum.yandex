@@ -1,0 +1,65 @@
+@import 'variables';
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.4);
+    &--show {
+        display: block;
+    }
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        width: 340px;
+        min-height: 250px;
+        padding: 40px 30px;
+    
+        background: #FFFFFF;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+        border-radius: 12px;    
+    }
+    &__title {
+        font-size: 15px;
+        text-align: center;
+        &--error {
+            color: $error-color;;
+        }
+    }
+    &__file-error {
+        display: none;
+        text-align: center;
+        color: $error-color;;
+    }
+    &__file-error--active {
+        display: block;
+    }
+}
+
+.file {
+    position: relative;
+    &__label {
+        display: block;
+        color: $main-color;
+        text-decoration: underline;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__input {
+        display: none;
+    }
+}
