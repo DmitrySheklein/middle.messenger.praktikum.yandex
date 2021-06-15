@@ -1,6 +1,4 @@
-(function () {
-    console.log('123');
-    
+(function () {    
     const form = document.forms[0];
 
     function onSubmit(event) {
