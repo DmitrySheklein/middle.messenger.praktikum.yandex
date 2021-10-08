@@ -64,5 +64,6 @@ typings/
 build/
 dist/
 .cache
+.idea
 .parcel-cache
 dist/index.html
