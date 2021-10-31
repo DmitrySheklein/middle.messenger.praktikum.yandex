@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/DmitrySheklein/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
+    "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "eslint": "^8.1.0",
@@ -52,5 +53,8 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": false
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
   }
 }
